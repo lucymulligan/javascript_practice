@@ -1,12 +1,12 @@
-function capitalize(word) {
-  if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+function capitalize(string) {
+  if (string === undefined) throw new Error("word is required");
+  else return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
+  else return firstName.charAt(0).toUpperCase() + firstName.slice(1) + lastName.charAt(0).toUpperCase() + lastName.slice(1)
 }
 
 function addVAT(originalPrice, vatRate) {
@@ -61,5 +61,5 @@ module.exports = {
   reverseAllWords,
   countLinuxUsers,
   getMeanScore,
-  simpleFizzBuzz
-};
+  simpleFizzBuzz,
+}
