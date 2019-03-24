@@ -49,7 +49,7 @@ describe("addVAT", () => {
   });
 });
 
-xdescribe("getSalePrice", () => {
+describe("getSalePrice", () => {
   test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
@@ -77,7 +77,7 @@ xdescribe("getMiddleCharacter", () => {
   });
 });
 
-xdescribe("reverseWord", () => {
+describe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });

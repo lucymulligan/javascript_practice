@@ -19,6 +19,8 @@ function addVAT(originalPrice, vatRate) {
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
+  let finalPrice = (originalPrice - reduction)/ originalPrice * 100; 
+  return finalPrice 
 
 }
 
@@ -29,7 +31,10 @@ function getMiddleCharacter(str) {
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  else return word.reverse 
+  let splitWord = word.split
+  let reverse = splitWord.reverse(); 
+  let joinBack = reverse.join();
+  return joinBack;  
 }
 
 function reverseAllWords(words) {
