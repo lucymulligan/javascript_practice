@@ -12,13 +12,14 @@ function generateInitials(firstName, lastName) {
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
     if (vatRate === undefined) throw new Error("vatRate is required");
-    else return originalPrice * vatRate
+    let newPrice = (originalPrice + (originalPrice * vatRate / 100)).toFixed(2);
+    return (Math.round(newPrice * 100) / 100)
   }
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
+
 }
 
 function getMiddleCharacter(str) {
@@ -28,22 +29,26 @@ function getMiddleCharacter(str) {
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  else return word.reverse 
 }
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Add your code here!
 }
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
+
 }
 
+let total = 0
 function getMeanScore(scores) {
-  if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
+if (scores === undefined) throw new Error("scores is required");
+else for(let i = 0; i < scores.length; i++) {
+  total += scores[i]; 
+}
+  let mean = total / scores.length
+  return mean.toFixed(2) 
 }
 
 function simpleFizzBuzz(n) {

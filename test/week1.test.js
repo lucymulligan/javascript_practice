@@ -31,7 +31,7 @@ describe("generateInitials", () => {
   });
 });
 
-xdescribe("addVAT", () => {
+describe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
@@ -86,8 +86,7 @@ xdescribe("reverseWord", () => {
     expect(reverseWord("why would you even want to do this?")).toBe(
       "?siht od ot tnaw neve uoy dluow yhw"
     );
-  });
-});
+  });});
 
 xdescribe("reverseAllWords", () => {
   test("reverses a single word in an array", () => {
@@ -95,8 +94,7 @@ xdescribe("reverseAllWords", () => {
   });
 
   test("reverses a multiple words in an array", () => {
-    expect(
-      reverseAllWords(["jest", "mocha", "rspec", "jasmine", "selenium"])
+    expect(reverseAllWords(["jest", "mocha", "rspec", "jasmine", "selenium"])
     ).toEqual(["tsej", "ahcom", "cepsr", "enimsaj", "muineles"]);
   });
 });
@@ -143,7 +141,7 @@ xdescribe("simpleFizzBuzz", () => {
   });
 
   test("returns 'buzz' if the number is divisible by 5", () => {
-    expect(simpleFizzBuzz(3)).toBe("buzz");
+    expect(simpleFizzBuzz(5)).toBe("buzz");
   });
 
   test("returns the number if the number is divisible by neither 3 nor 5", () => {
