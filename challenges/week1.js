@@ -31,9 +31,9 @@ function getMiddleCharacter(str) {
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
-  let splitWord = word.split
+  let splitWord = word.split("")
   let reverse = splitWord.reverse(); 
-  let joinBack = reverse.join();
+  let joinBack = reverse.join("");
   return joinBack;  
 }
 
@@ -52,15 +52,15 @@ if (scores === undefined) throw new Error("scores is required");
 else for(let i = 0; i < scores.length; i++) {
   total += scores[i]; 
 }
-  let mean = total / scores.length
+  let mean = (total / scores.length)
   return mean.toFixed(2) 
 }
 
 function simpleFizzBuzz(n) {
   if (n === undefined) throw new Error("n is required");
+  if (n % 15 === 0) return 'fizzbuzz';
   if (n % 3 === 0) return 'fizz';
   if (n % 5 === 0) return 'buzz';
-  if (n % 3 === 0 + n % 5 === 0) return 'fizzbuzz';
   else return n
   }
  
