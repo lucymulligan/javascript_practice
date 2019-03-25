@@ -63,7 +63,7 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 50 by 0%", () => {
-    expect(getSalePrice(50, 0)).toBe(0);
+    expect(getSalePrice(50, 0)).toBe(50);
   });
 });
 
@@ -77,7 +77,7 @@ xdescribe("getMiddleCharacter", () => {
   });
 });
 
-describe("reverseWord", () => {
+xdescribe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
@@ -124,7 +124,7 @@ xdescribe("countLinuxUsers", () => {
   });
 });
 
-xdescribe("getMeanScore", () => {
+describe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
     expect(getMeanScore([8, 9, 7])).toBe(8);
     expect(getMeanScore([88, 86, 93])).toBe(89);
@@ -135,7 +135,7 @@ xdescribe("getMeanScore", () => {
   });
 });
 
-xdescribe("simpleFizzBuzz", () => {
+describe("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
   });
