@@ -19,6 +19,7 @@ function addVAT(originalPrice, vatRate) {
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
+  if (reduction === 0) return originalPrice
   let finalPrice = (originalPrice - reduction)/ originalPrice * 100; 
   return finalPrice 
 
@@ -39,10 +40,17 @@ function reverseWord(word) {
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
+  let arraySplit = words.split("");
+  let reverse1 = arraySplit.reverse();
+  let reOrdered = reverse1.join("");
+  return reOrdered;
 }
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
+  let count = 0;
+  users.forEach((type === "Linux").length);
+  return count++
 
 }
 
