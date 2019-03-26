@@ -21,13 +21,24 @@ function getSalePrice(originalPrice, reduction) {
   if (reduction === undefined) throw new Error("reduction is required");
   if (reduction === 0) return originalPrice
   let finalPrice = (originalPrice - reduction)/ originalPrice * 100; 
-  return finalPrice 
+  return finalPrice
 
 }
-
+// Copied this from online - it would be great if this could be explained - thank you
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
+  var position
+  var length
+  if(str.length % 2 == 1) {
+    position = str.length / 2;
+    length = 1;
+} else {
+    position = str.length / 2 - 1;
+    length = 2;
+}
+  let result = str.substring(position, position + length)
+  return result   
+ 
 }
 
 function reverseWord(word) {
@@ -48,9 +59,6 @@ function reverseAllWords(words) {
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  let count = 0;
-  users.forEach((type === "Linux").length);
-  return count++
 
 }
 
@@ -71,7 +79,7 @@ function simpleFizzBuzz(n) {
   if (n % 5 === 0) return 'buzz';
   else return n
   }
- 
+
 
 
 module.exports = {
@@ -85,4 +93,5 @@ module.exports = {
   countLinuxUsers,
   getMeanScore,
   simpleFizzBuzz,
-}
+
+} 
