@@ -15,10 +15,17 @@ function getBusNumbers(people) {
   // Your code here!
 }
 
+
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
-  // Your code here!
-}
+  let total = 0;
+  arr.forEach (function (arr) {
+    if (arr === "sheep")
+      total += 1 
+  });
+    return total 
+  }
+
 
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
@@ -34,4 +41,4 @@ module.exports = {
   countSheep,
   getBusNumbers,
   hasMPostCode
-};
+}
