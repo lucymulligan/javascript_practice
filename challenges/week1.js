@@ -20,8 +20,9 @@ function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   if (reduction === 0) return originalPrice
-  let finalPrice = (originalPrice - reduction)/ originalPrice * 100; 
-  return finalPrice
+  let cutPrice = (reduction / 100) * originalPrice; 
+  let finalPrice = (originalPrice - cutPrice)
+  return Number (finalPrice).toFixed(2)
 
 }
 // Copied this from online - it would be great if this could be explained - thank you
@@ -59,17 +60,24 @@ function reverseAllWords(words) {
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-
+  users.forEach (function user {
+    let total = 0 
+    let opSystem = user.type  
+        if (opSystem === "Linux") 
+      total += 1
+        }
+    return total; 
 }
 
-let total = 0
+
 function getMeanScore(scores) {
 if (scores === undefined) throw new Error("scores is required");
-else for(let i = 0; i < scores.length; i++) {
+let total = 0
+for(let i = 0; i < scores.length; i++) {
   total += scores[i]; 
 }
   let mean = (total / scores.length)
-  return mean.toFixed(2) 
+  return Number (mean).toFixed(2) 
 }
 
 function simpleFizzBuzz(n) {

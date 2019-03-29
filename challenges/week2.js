@@ -12,7 +12,9 @@ function isFromManchester(person) {
 
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
-  // Your code here!
+  if (people %40 === 0) return 0
+  else return 
+  
 }
 
 
