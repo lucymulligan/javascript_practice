@@ -105,7 +105,7 @@ xdescribe("countSheep", () => {
   });
 });
 
-xdescribe("hasMPostCode", () => {
+describe("hasMPostCode", () => {
   test("returns true if the person has a postcode starting with M", () => {
     const person = {
       name: "Mohammed",
