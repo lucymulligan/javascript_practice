@@ -13,7 +13,7 @@ function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
     if (vatRate === undefined) throw new Error("vatRate is required");
     let newPrice = (originalPrice + (originalPrice * vatRate / 100)).toFixed(2);
-    return (Math.round(newPrice * 100) / 100)
+    return Number (newPrice)
   }
 
 function getSalePrice(originalPrice, reduction) {
@@ -60,14 +60,18 @@ function reverseAllWords(words) {
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  users.forEach (function user {
-    let total = 0 
-    let opSystem = user.type  
-        if (opSystem === "Linux") 
-      total += 1
-        }
+  
+  let total = 0;
+  
+  users.forEach (function (user) { 
+    let opSystem = user.type;  
+        if (opSystem === "Linux") {
+      total += 1;
+    }
+  });
     return total; 
 }
+
 
 
 function getMeanScore(scores) {
@@ -102,4 +106,5 @@ module.exports = {
   getMeanScore,
   simpleFizzBuzz,
 
-} 
+}
+ 

@@ -31,7 +31,7 @@ xdescribe("generateInitials", () => {
   });
 });
 
-xdescribe("addVAT", () => {
+describe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
@@ -124,7 +124,7 @@ xdescribe("countLinuxUsers", () => {
   });
 });
 
-describe("getMeanScore", () => {
+xdescribe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
     expect(getMeanScore([8, 9, 7])).toBe(8);
     expect(getMeanScore([88, 86, 93])).toBe(89);
