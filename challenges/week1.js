@@ -52,10 +52,11 @@ function reverseWord(word) {
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  let arraySplit = words.split("");
-  let reverse1 = arraySplit.reverse();
-  let reOrdered = reverse1.join("");
-  return reOrdered;
+  let splitWord = words.split("")
+  let reverse = splitWord.reverse();
+  let joinBack = reverse.join("");
+  let finalArray = joinBack.words.reverse;
+  return finalArray
 }
 
 function countLinuxUsers(users) {
