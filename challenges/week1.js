@@ -22,10 +22,10 @@ function getSalePrice(originalPrice, reduction) {
   if (reduction === 0) return originalPrice
   let cutPrice = (reduction / 100) * originalPrice; 
   let finalPrice = (originalPrice - cutPrice)
-  return Number (finalPrice).toFixed(2)
+  return Number (finalPrice.toFixed(2))
 
 }
-// Copied this from online - it would be great if this could be explained - thank you
+
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   var position
