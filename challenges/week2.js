@@ -12,8 +12,11 @@ function isFromManchester(person) {
 
 function getBusNumbers(people) {
   if (people === undefined) throw new Error("people is required");
-  if (people %40 === 0) return 0
-  else return 
+  let noBus = (people / 40)
+  let extraBus = Math.floor((people / 40) +1)
+  if (people <= 40) return 1
+  if (noBus %1 === 0) return noBus
+  else return extraBus;
   
 }
 
