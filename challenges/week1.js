@@ -49,7 +49,7 @@ function reverseWord(word) {
   let joinBack = reverse.join("");
   return joinBack;  
 }
-
+// struggling with this ones
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   let splitWord = words.split("")
