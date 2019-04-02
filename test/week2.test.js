@@ -6,7 +6,7 @@ const {
   hasMPostCode
 } = require("../challenges/week2");
 
-xdescribe("getFillings", () => {
+describe("getFillings", () => {
   test("returns the fillings of a sandwich", () => {
     const sandwich = {
       bread: "Sourdough",
@@ -24,7 +24,7 @@ xdescribe("getFillings", () => {
   });
 });
 
-xdescribe("isFromManchester", () => {
+describe("isFromManchester", () => {
   test("returns true if the person is from Manchester", () => {
     const person = {
       name: "Mohammed",
@@ -73,7 +73,7 @@ describe("getBusNumbers", () => {
   });
 });
 
-xdescribe("countSheep", () => {
+describe("countSheep", () => {
   test("returns 0 if there are 0 sheep in the array", () => {
     const arr = ["dog", "badger", "dog", "dog", "chicken"];
     expect(countSheep(arr)).toBe(0);
@@ -105,7 +105,7 @@ xdescribe("countSheep", () => {
   });
 });
 
-xdescribe("hasMPostCode", () => {
+describe("hasMPostCode", () => {
   test("returns true if the person has a postcode starting with M", () => {
     const person = {
       name: "Mohammed",
