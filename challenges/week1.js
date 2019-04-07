@@ -11,18 +11,18 @@ function generateInitials(firstName, lastName) {
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
-    if (vatRate === undefined) throw new Error("vatRate is required");
-    let newPrice = (originalPrice + (originalPrice * vatRate / 100)).toFixed(2);
-    return Number (newPrice)
-  }
+  if (vatRate === undefined) throw new Error("vatRate is required");
+  let newPrice = (originalPrice + (originalPrice * vatRate / 100)).toFixed(2);
+  return Number(newPrice)
+}
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   if (reduction === 0) return originalPrice
-  let cutPrice = (reduction / 100) * originalPrice; 
+  let cutPrice = (reduction / 100) * originalPrice;
   let finalPrice = (originalPrice - cutPrice)
-  return Number (finalPrice.toFixed(2))
+  return Number(finalPrice.toFixed(2))
 
 }
 
@@ -30,24 +30,24 @@ function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
   var position
   var length
-  if(str.length % 2 == 1) {
+  if (str.length % 2 == 1) {
     position = str.length / 2;
     length = 1;
-} else {
+  } else {
     position = str.length / 2 - 1;
     length = 2;
-}
+  }
   let result = str.substring(position, position + length)
-  return result   
- 
+  return result
+
 }
 
 function reverseWord(word) {
   if (word === undefined) throw new Error("word is required");
   let splitWord = word.split("")
-  let reverse = splitWord.reverse(); 
+  let reverse = splitWord.reverse();
   let joinBack = reverse.join("");
-  return joinBack;  
+  return joinBack;
 }
 // struggling with this ones
 function reverseAllWords(words) {
@@ -61,29 +61,29 @@ function reverseAllWords(words) {
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  
+
   let total = 0;
-  
-  users.forEach (function (user) { 
-    let opSystem = user.type;  
-        if (opSystem === "Linux") {
+
+  users.forEach(function (user) {
+    let opSystem = user.type;
+    if (opSystem === "Linux") {
       total += 1;
     }
   });
-    return total; 
+  return total;
 }
 
 
 
 function getMeanScore(scores) {
-if (scores === undefined) throw new Error("scores is required");
-let total = 0;
-for(let i = 0; i < scores.length; i++) {
-  total += scores[i]; 
-}
+  if (scores === undefined) throw new Error("scores is required");
+  let total = 0;
+  for (let i = 0; i < scores.length; i++) {
+    total += scores[i];
+  }
   let mean = (total / scores.length)
   let mdec = mean.toFixed(2)
-  return Number (mdec)
+  return Number(mdec)
 }
 
 function simpleFizzBuzz(n) {
@@ -92,7 +92,7 @@ function simpleFizzBuzz(n) {
   if (n % 3 === 0) return 'fizz';
   if (n % 5 === 0) return 'buzz';
   else return n
-  }
+}
 
 
 
@@ -109,4 +109,3 @@ module.exports = {
   simpleFizzBuzz,
 
 }
- 
