@@ -1,8 +1,8 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
-    let result = nums.map(function (x) {
-    return (Math.pow (x, 2));
-  });
+    let result = nums.map((num) => num * num);
+    return result
+  ;
 }
 
 function camelCaseWords(words) {
