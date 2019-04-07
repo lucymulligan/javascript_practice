@@ -1,13 +1,9 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
-  if (nums === 0) return 0 
-  nums.forEach(function (nums) {
-    let sqNum = (nums*nums);
-    if (nums === 0) return 0 
-      else return sqNum.map;
-    });
-  }
-
+    let result = nums.map(function (x) {
+    return (Math.pow (x, 2));
+  });
+}
 
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
