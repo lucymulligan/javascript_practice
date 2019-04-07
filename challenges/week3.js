@@ -12,7 +12,13 @@ function camelCaseWords(words) {
 
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
-  // Your code here!
+  let total = 0;
+  people.forEach(function (people) {
+    if (people.subject >= 1) {
+      total += 1;
+    }
+  });
+  return total;
 }
 
 function checkIngredients(menu, ingredient) {
