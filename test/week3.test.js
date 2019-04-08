@@ -44,7 +44,7 @@ xdescribe("getSquares", () => {
   });
 });
 
-xdescribe("getTotalSubjects", () => {
+describe("getTotalSubjects", () => {
   test("returns 0 if no people have subjects", () => {
     const people = [
       { name: "Billy", subjects: [] },
@@ -73,7 +73,7 @@ xdescribe("getTotalSubjects", () => {
   });
 });
 
-describe("checkIngredients", () => {
+xdescribe("checkIngredients", () => {
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
       {

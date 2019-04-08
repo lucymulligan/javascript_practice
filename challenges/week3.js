@@ -14,20 +14,23 @@ function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   let total = 0;
   people.forEach(function (people) {
-    if (people.subject >= 1) {
-      total += 1;
+    let subjectChoice = people.subject
+    if (subjectChoice >= 1) {
+      (total += 1);
     }
+    return total
   });
-  return total;
 }
 
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
-  let checkI = menu.forEach(function (menu) {
+  menu.forEach(function (menu) {
+    let checkI = menu.ingredient
     if (menu.ingredient === (ingredient)) 
     return Boolean(checkI);
   });
+}
 
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
