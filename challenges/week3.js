@@ -16,9 +16,9 @@ function getTotalSubjects(people) {
   people.forEach(function (people) {
     let subjectChoice = people.subject
     if (subjectChoice >= 1) {
-      (total += 1);
+      (total += 1); return total
     }
-    return total
+   
   });
 }
 
@@ -27,8 +27,9 @@ function checkIngredients(menu, ingredient) {
   if (!ingredient) throw new Error("ingredient is required");
   menu.forEach(function (menu) {
     let checkI = menu.ingredient
-    if (menu.ingredient === (ingredient)) 
-    return Boolean(checkI);
+    if (checkI === (ingredient)) 
+    return true;
+    else return false
   });
 }
 
