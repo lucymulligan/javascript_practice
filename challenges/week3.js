@@ -13,23 +13,18 @@ function camelCaseWords(words) {
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   let total = 0;
-  people.forEach(function (people) {
-    let subjectChoice = people.subject
-    if (subjectChoice >= 1) {
-      (total += 1); return total
+  for (var i=1; i < subject; i++)
+  return total 
     }
-   
-  });
-}
+
 
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   menu.forEach(function (menu) {
     let checkI = menu.ingredient
-    if (checkI === (ingredient)) 
-    return true;
-    else return false
+    if (checkI === ingredient)
+    return Boolean;
   });
 }
 
