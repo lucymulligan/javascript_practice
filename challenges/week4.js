@@ -2,11 +2,11 @@ function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
   let smallerNums = [];
   for (let i = 0; i < nums.length; i++);
-  (function (num) {
-  if (num < 1); 
-  smallerNums.push(num);
-  });
+  let item = nums;
+  let tinyNum = (item < 1);
+  smallerNums.push(tinyNum);
   }
+  
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
