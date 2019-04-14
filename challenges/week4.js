@@ -1,14 +1,12 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  let newArray = []
-
-  for (let i = 0; i < nums.length; i++) {
-    let num = nums[0];
-    let smallNums = (num < 1);
-    newArray.push(smallNums)
+  let smallerNums = [];
+  for (let i = 0; i < nums.length; i++);
+  (function (num) {
+  if (num < 1); 
+  smallerNums.push(num);
+  });
   }
-  return (newArray)
-}
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
@@ -56,4 +54,4 @@ module.exports = {
   getSquareRoots,
   findSentencesContaining,
   getLongestSides
-};
+}
