@@ -1,10 +1,11 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  let smallerNums = [];
-  for (let i = 0; i < nums.length; i++);
-  let item = nums;
-  let tinyNum = (item < 1);
-  smallerNums.push(tinyNum);
+  let smallNums = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if (num < 1) smallNums.push(num) 
+}
   }
   
 
