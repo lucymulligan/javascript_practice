@@ -23,7 +23,6 @@ function getSalePrice(originalPrice, reduction) {
   let cutPrice = (reduction / 100) * originalPrice;
   let finalPrice = (originalPrice - cutPrice)
   return Number(finalPrice.toFixed(2))
-
 }
 
 function getMiddleCharacter(str) {
@@ -39,7 +38,6 @@ function getMiddleCharacter(str) {
   }
   let result = str.substring(position, position + length)
   return result
-
 }
 
 function reverseWord(word) {
@@ -52,11 +50,13 @@ function reverseWord(word) {
 // struggling with this ones
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
+  let reversedArray = []; 
+  words.forEach()
   let splitWord = words.split("")
   let reverse = splitWord.reverse();
   let joinBack = reverse.join("");
-  let finalArray = joinBack.words.reverse;
-  return finalArray
+  reversedArray.push(joinBack)
+  return reversedArray;
 }
 
 function countLinuxUsers(users) {

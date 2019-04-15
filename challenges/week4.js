@@ -7,8 +7,7 @@ function findSmallNums(nums) {
     smallNums.push(num);
   return smallNums
 }
-}
-  
+}  
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
@@ -24,7 +23,12 @@ function findNamesBeginningWith(names, char) {
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
+  const verbs = []; 
+  for (let i =0; i < words.length; i++);
+  let word = words[i]; {
+    if (word.charAt(0, 1) === );
+    verbs.push(word); 
+  }
 }
 
 function getIntegers(nums) {

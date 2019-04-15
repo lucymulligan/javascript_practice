@@ -73,7 +73,7 @@ xdescribe("getBusNumbers", () => {
   });
 });
 
-describe("countSheep", () => {
+xdescribe("countSheep", () => {
   test("returns 0 if there are 0 sheep in the array", () => {
     const arr = ["dog", "badger", "dog", "dog", "chicken"];
     expect(countSheep(arr)).toBe(0);
