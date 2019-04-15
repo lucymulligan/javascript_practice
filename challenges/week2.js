@@ -24,7 +24,7 @@ function getBusNumbers(people) {
 function countSheep(arr) {
   if (!arr) throw new Error("arr is required");
   let total = 0;
-  arr.forEach(function (arr) {
+  arr.forEach(function (item) {
     if (item === "sheep")
       total += 1
   });
