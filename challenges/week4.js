@@ -1,18 +1,25 @@
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  let smallNums = [];
-
+  const smallNums = [];
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
-    if (num < 1) smallNums.push(num) 
+    if (num < 1) 
+    smallNums.push(num);
+  return smallNums
 }
-  }
+}
   
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
+  const returnedNames = [];
+  for (let i = 0; i < names.length; i++) {
+    const name = names[i];
+  if (name.charAt(0) === char) 
+    returnedNames.push(names)
+    return returnedNames
+  }
 }
 
 function findVerbs(words) {
@@ -32,7 +39,13 @@ function getCities(users) {
 
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  let sqRoots = [];
+  for (let i = 0; i < nums.length; i++) {
+  const num = nums[i]
+  let roots = Math.sqrt(num)
+  sqRoots.push(roots);
+  return sqRoots
+  }
 }
 
 function findSentencesContaining(sentences, str) {
