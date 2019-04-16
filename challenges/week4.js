@@ -23,12 +23,20 @@ function findNamesBeginningWith(names, char) {
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required"); 
+  
   }
+
 
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  let wholeNums = [];
+  for (let i = 0; i < nums.length; i++) {
+  let num = nums[i];
+  if (num % 1 ===0) {
+    wholeNums.push(num)}
+  return wholeNums;
+  }
 }
 
 function getCities(users) {
