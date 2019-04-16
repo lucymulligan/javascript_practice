@@ -4,7 +4,7 @@ function findSmallNums(nums) {
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
     if (num < 1) 
-    smallNums.push(num);
+    { smallNums.push(num); }
   return smallNums
 }
 }  
@@ -22,14 +22,9 @@ function findNamesBeginningWith(names, char) {
 }
 
 function findVerbs(words) {
-  if (!words) throw new Error("words is required");
-  const verbs = []; 
-  for (let i =0; i < words.length; i++);
-  let word = words[i]; {
-    if (word.charAt(0, 1) === );
-    verbs.push(word); 
+  if (!words) throw new Error("words is required"); 
   }
-}
+
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
