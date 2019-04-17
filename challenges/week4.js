@@ -3,11 +3,12 @@ function findSmallNums(nums) {
   const smallNums = [];
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i];
-    if (num < 1) 
-    { smallNums.push(num); }
+    if (num < 1) {
+      smallNums.push(num);
+    }
+  }
   return smallNums
 }
-}  
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
@@ -15,16 +16,17 @@ function findNamesBeginningWith(names, char) {
   const returnedNames = [];
   for (let i = 0; i < names.length; i++) {
     const name = names[i];
-  if (name.charAt(0) === char) 
-    returnedNames.push(names)
-    return returnedNames
+    if (name.charAt(0) === char) {
+      returnedNames.push(name)
+    }
   }
+  return returnedNames
 }
 
 function findVerbs(words) {
-  if (!words) throw new Error("words is required"); 
-  
-  }
+  if (!words) throw new Error("words is required");
+
+}
 
 
 
@@ -32,11 +34,12 @@ function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   let wholeNums = [];
   for (let i = 0; i < nums.length; i++) {
-  let num = nums[i];
-  if (num % 1 ===0) {
-    wholeNums.push(num)}
-  return wholeNums;
+    let num = nums[i];
+    if (num % 1 === 0) {
+      wholeNums.push(num)
+    }
   }
+  return wholeNums
 }
 
 function getCities(users) {
@@ -48,17 +51,24 @@ function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   let sqRoots = [];
   for (let i = 0; i < nums.length; i++) {
-  const num = nums[i]
-  let roots = Math.sqrt(num)
-  sqRoots.push(roots);
-  return sqRoots
+    const num = nums[i]
+    let roots = Number (Math.sqrt(num).toFixed(2));
+    sqRoots.push(roots);
   }
+  return sqRoots
 }
 
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
+  const foundSentences = [];
+  for (let i = 0; i < sentences.length; i++) {
+    let sentence = sentences[i];
+    if (sentence.includes(str)) {
+      foundSentences.push(sentence);
+    }
+  }
+return foundSentences   
 }
 
 function getLongestSides(triangles) {

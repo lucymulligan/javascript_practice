@@ -1,8 +1,12 @@
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
-    let result = nums.map((num) => num * num);
-    return result
-  ;
+  const squaredNums = [];
+  for (let i = 0; i < nums.length; i++) {
+    let num = nums[i]
+    let squared = (num * num);
+    squaredNums.push(squared)
+  }
+  return squaredNums
 }
 
 function camelCaseWords(words) {
