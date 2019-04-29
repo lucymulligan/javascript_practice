@@ -47,15 +47,18 @@ function reverseWord(word) {
   let joinBack = reverse.join("");
   return joinBack;
 }
-// struggling with this ones
+
+
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
   let reversedArray = []; 
-  words.forEach()
-  let splitWord = words.split("")
-  let reverse = splitWord.reverse();
-  let joinBack = reverse.join("");
-  reversedArray.push(joinBack)
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let splitWord = word.split("");
+    let reverse = splitWord.reverse();
+    let joinBack = reverse.join("");
+    reversedArray.push(joinBack)
+  }
   return reversedArray;
 }
 
