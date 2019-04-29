@@ -25,6 +25,13 @@ function findNamesBeginningWith(names, char) {
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
+  const verbs = [];
+  let word = words[i];
+  for (let i = 0; i < words.length; i++) {
+    if (word.charAt(0, 1) === ('t')('o')) {
+      verbs.push(word)
+    }
+  }
 
 }
 
@@ -44,7 +51,10 @@ function getIntegers(nums) {
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
+  let cities = [];
+  for (let i = 0; i < users.length; i++) {
+    users.data.city.displayName.push(cities)
+  }
 }
 
 function getSquareRoots(nums) {
@@ -73,7 +83,12 @@ return foundSentences
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  // Your code here
+  let longSides = [];
+  for (let i = 0; i < triangles.length; i++) {
+    let longestSide = Math.max.apply(Math, triangles[i]);
+    longSides.push(longestSide);
+  }
+  return longSides
 }
 
 module.exports = {
