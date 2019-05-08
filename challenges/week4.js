@@ -28,7 +28,7 @@ function findVerbs(words) {
   const verbs = [];
   let word = words[i];
   for (let i = 0; i < words.length; i++) {
-    if (word.charAt(0, 1) === ('t')('o')) {
+    if (word.slice(0, 1) === 'to') {
       verbs.push(word)
     }
   }
@@ -53,8 +53,10 @@ function getCities(users) {
   if (!users) throw new Error("users is required");
   let cities = [];
   for (let i = 0; i < users.length; i++) {
-    users.data.city.displayName.push(cities)
+    const user = users[i];
+    user.data.city.displayName.push(cities)
   }
+  return cities
 }
 
 function getSquareRoots(nums) {
@@ -62,7 +64,7 @@ function getSquareRoots(nums) {
   let sqRoots = [];
   for (let i = 0; i < nums.length; i++) {
     const num = nums[i]
-    let roots = Number (Math.sqrt(num).toFixed(2));
+    let roots = Number(Math.sqrt(num).toFixed(2));
     sqRoots.push(roots);
   }
   return sqRoots
@@ -78,7 +80,7 @@ function findSentencesContaining(sentences, str) {
       foundSentences.push(sentence);
     }
   }
-return foundSentences   
+  return foundSentences
 }
 
 function getLongestSides(triangles) {
