@@ -54,7 +54,8 @@ function getCities(users) {
   let cities = [];
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
-    user.data.city.displayName.push(cities)
+    let userCity = user.data.city.displayName;
+    cities.push(userCity)
   }
   return cities
 }
@@ -79,8 +80,8 @@ function findSentencesContaining(sentences, str) {
     if (sentence.includes(str)) {
       foundSentences.push(sentence);
     }
+    return foundSentences
   }
-  return foundSentences
 }
 
 function getLongestSides(triangles) {
