@@ -26,11 +26,12 @@ function findNamesBeginningWith(names, char) {
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
   const verbs = [];
-  let word = words[i];
   for (let i = 0; i < words.length; i++) {
-    if (word.slice(0, 1) === 'to') {
+    const word = words[i]
+    if (word.slice(1) === 'to') {
       verbs.push(word)
     }
+    return verbs
   }
 
 }
