@@ -28,12 +28,11 @@ function findVerbs(words) {
   const verbs = [];
   for (let i = 0; i < words.length; i++) {
     const word = words[i]
-    if (word.slice(1) === 'to') {
+    if (word.slice(0, 2) === 'to') {
       verbs.push(word)
     }
     return verbs
   }
-
 }
 
 

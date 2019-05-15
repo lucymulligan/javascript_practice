@@ -18,7 +18,7 @@ function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   let subjects = [];
   for (let i = 0; i < people.length; i++) {
-    person = people[i];
+    let person = people[i];
     if (person.subjects === String)
     subjects.push(person)
   }
@@ -30,9 +30,10 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   menu.forEach(function (menu) {
-    let checkI = menu.ingredient
-    if (checkI === ingredient)
-    return Boolean;
+    let ingredient1 = menu.ingredients
+    if (ingredient1 === ingredient)
+    return true;
+    else return false
   });
 }
 
