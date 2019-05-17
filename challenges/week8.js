@@ -1,7 +1,20 @@
 const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
+  let initialNo = nums.indexOf(n);
+  for (let i = 0; i < nums; i++) {
+    if (initialNo === Number)
+      return (initialNo +1);
+   else {
+    return null;
+  }
+}
+  // loop through the array for find index of given number
+  // find value of index of given number + 1
+  // return value of index of given number + 1
+  // if given number is not found return null
+  // return index + 1 in first instance of given number
+  // if given number is final number return null 
 };
 
 const count1sand0s = str => {
@@ -47,9 +60,9 @@ const findNeedle = (haystack, searchTerm) => {
   for (let key in haystack) {
     const value = haystack[key];
     if (typeof value === 'string') {
-    if (value.toLowerCase().includes(searchTerm)) {
-      return true;
-    }
+      if (value.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
     }
   }
   return false;
