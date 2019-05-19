@@ -1,21 +1,21 @@
 const findNextNumber = (nums, n) => {
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  let initialNo = nums.indexOf(n);
   for (let i = 0; i < nums; i++) {
-    if (initialNo === Number)
-      return (initialNo +1);
-   else {
-    return null;
+    let index = (nums.indexOf(n))
+    let newNum = nums(index + 1);
+    if (newNum === Number)
+    return newNum
+    else 
+    return null
   }
-}
+};
   // loop through the array for find index of given number
   // find value of index of given number + 1
   // return value of index of given number + 1
   // if given number is not found return null
   // return index + 1 in first instance of given number
   // if given number is final number return null 
-};
 
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
@@ -38,12 +38,18 @@ const count1sand0s = str => {
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
 };
 
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
-  // Your code here!
+  let sum = arrs.reduce(add);
+  let add =  (a, b) => a = b
+
+  for (let i = 0; i < arrs.length; i++) {
+    sum += arrs[i]
+  }
+
+  return sum
 };
 
 const arrShift = arr => {
