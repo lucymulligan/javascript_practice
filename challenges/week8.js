@@ -42,15 +42,15 @@ const reverseNumber = n => {
 
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
-  let sum = arrs.reduce(add);
-  let add =  (a, b) => a = b
+  let finalSum = 0;
 
   for (let i = 0; i < arrs.length; i++) {
-    sum += arrs[i]
+    for (var j = 0; j < arrs[j].length; j++) {
+      finalSum += arrs[i][j];
   }
-
-  return sum
-};
+}
+return finalSum;
+}
 
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
