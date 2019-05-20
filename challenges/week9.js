@@ -12,11 +12,7 @@ const sumMultiples = arr => {
       total += n
     }
   })
-    let num = arr[i];
-    if (num %3 === 0) += newMultiples
-    if (num %5 === 0) += newMultiples
-  }
-  return newMultiples;
+  return total;
 };
 
 /**
