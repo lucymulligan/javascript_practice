@@ -38,7 +38,7 @@ const count1sand0s = str => {
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
-};
+}
 
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
@@ -47,6 +47,7 @@ const sumArrays = arrs => {
   for (let i = 0; i < arrs.length; i++) {
     for (var j = 0; j < arrs[j].length; j++) {
       finalSum += arrs[i][j];
+      break;
   }
 }
 return finalSum;

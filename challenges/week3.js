@@ -11,7 +11,13 @@ function getSquares(nums) {
 
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
-  // Your code here!
+  for (let i = 0; i < words.length; i++) {
+  return words.toLowerCase()
+  .replace( /[-_]+/g, ' ')
+  .replace( /[^\w\s]/g, '')
+  .replace( / (.)/g, function($1) 
+  { return $1.toUpperCase(); })
+  }
 }
 
 function getTotalSubjects(people) {
@@ -49,4 +55,5 @@ module.exports = {
   getTotalSubjects,
   checkIngredients,
   duplicateNumbers
-};
+}
+
