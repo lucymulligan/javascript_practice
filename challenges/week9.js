@@ -41,6 +41,9 @@ const getComplementaryDNA = str => {
  */
 const isItPrime = n => {
   if (!n) throw new Error("n is required");
+  if (n % n === 0 && n % 1 === 0)
+  return true;
+  else return false;
 };
 
 /**
