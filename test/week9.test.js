@@ -74,4 +74,8 @@ describe("isValidDNA", () => {
         expect(isValidDNA("CGTA")).toBe(true);
     });
 
+    test("it returns false if the DNA string is valid", () => {
+        expect(isValidDNA("CLGTA")).toBe(false);
+    });
+
 });
