@@ -1,4 +1,4 @@
-const { sumMultiples } = require("../challenges/week9");
+const { sumMultiples, areWeCovered } = require("../challenges/week9");
 
 describe("sumMultiples", () => {
     test("returns the sum of any numbers which are a multiple of 3 or 5", () => {
@@ -24,3 +24,16 @@ describe("sumMultiples", () => {
     
     });
 });
+
+describe("areWeCovered", () => {
+    test("it returns false if there are no staff due on that day", () => {
+        expect(areWeCovered([], "Monday")).toBe(false);
+        expect(areWeCovered([], "Tuesday")).toBe(false);
+        expect(areWeCovered([], "Wednesday")).toBe(false);
+        expect(areWeCovered([], "Thursday")).toBe(false);
+        expect(areWeCovered([], "Friday")).toBe(false);
+        expect(areWeCovered([], "Saturday")).toBe(false);
+        expect(areWeCovered([], "Sunday")).toBe(false);
+    });
+
+    });
