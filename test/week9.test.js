@@ -1,4 +1,4 @@
-const { sumMultiples, areWeCovered, isItPrime, } = require("../challenges/week9");
+const { sumMultiples, areWeCovered, isItPrime, isValidDNA} = require("../challenges/week9");
 
 describe("sumMultiples", () => {
     test("returns the sum of any numbers which are a multiple of 3 or 5", () => {
@@ -58,13 +58,20 @@ describe("areWeCovered", () => {
 
     });
 
-describe("isItPrime", () => {
+xdescribe("isItPrime", () => {
     test("it returns true if the number is prime", () => {
         expect(isItPrime(13)).toBe(true);
     });
 
     test("it returns false if the number is not prime", () => {
         expect(isItPrime(26)).toBe(false);
+    });
+
+});
+
+describe("isValidDNA", () => {
+    test("it returns true if the DNA string is valid", () => {
+        expect(isValidDNA("CGTA")).toBe(true);
     });
 
 });
