@@ -36,4 +36,14 @@ describe("areWeCovered", () => {
         expect(areWeCovered([], "Sunday")).toBe(false);
     });
 
+    test("returns false if there are staff, but less than 3, but they are not due on that day", () => {
+        const staff = [
+            {name: "Lucy", rota: ["Monday", "Tuesday"]},
+            {name: "Stephanie", rota: ["Tuesday", "Wednesday"]},
+            {name: "Nathaniel", rota: ["Wednesday", "Thursday", "Friday"]},
+            {name: "Jonathan", rota: ["Saturday", "Sunday"]}
+        ];
+        expect(areWeCovered(staff, "Friday")).toBe(false);
+    });
+
     });

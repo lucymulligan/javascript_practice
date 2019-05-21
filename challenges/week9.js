@@ -74,10 +74,17 @@ const createMatrix = (n, fill) => {
 const areWeCovered = (staff, day) => {
   if (!staff) throw new Error("staff is required");
   if (!day) throw new Error("day is required");
-  if (staff.length === 0) {
-    return false;
-  }
-};
+  let noStaff = 0;
+  staff.forEach(function (staff) {
+      let workDay = (staff.day);
+      if (workDay === (day)) {
+        noStaff += 1;
+      }
+    });
+    if (noStaff >= 3)
+      return true;
+      else return false;
+  };
 
 module.exports = {
   sumMultiples,
